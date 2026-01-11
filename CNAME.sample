@@ -1,0 +1,8 @@
+# 自定义域名配置
+# 1. 将文件名改为 CNAME（去掉.sample后缀）
+# 2. 将下面的示例域名改为你的域名
+# 3. 推送到GitHub
+# 4. 在域名注册商处配置CNAME记录指向你的GitHub Pages地址
+
+example.com
+www.example.com

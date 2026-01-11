@@ -1,0 +1,48 @@
+<script src="https://giscus.app/client.js"
+        data-repo="{{ site.giscus.repo }}"
+        data-repo-id="{{ site.giscus.repo-id }}"
+        data-category="{{ site.giscus.category }}"
+        data-category-id="{{ site.giscus.category-id }}"
+        data-mapping="{{ site.giscus.mapping | default: 'pathname' }}"
+        data-strict="{{ site.giscus.strict | default: '0' }}"
+        data-reactions-enabled="{{ site.giscus.reactions-enabled | default: '1' }}"
+        data-emit-metadata="{{ site.giscus.emit-metadata | default: '0' }}"
+        data-input-position="{{ site.giscus.input-position | default: 'bottom' }}"
+        data-theme="{{ site.giscus.theme | default: 'light' }}"
+        data-lang="{{ site.giscus.lang | default: 'zh-CN' }}"
+        data-loading="{{ site.giscus.loading | default: 'lazy' }}"
+        crossorigin="anonymous"
+        async>
+</script>
+
+<noscript>
+  <p>评论系统需要JavaScript支持。如果您看到这条消息，请确保浏览器已启用JavaScript，或直接访问
+    <a href="https://github.com/{{ site.giscus.repo }}/discussions">GitHub Discussions</a>
+    参与讨论。
+  </p>
+</noscript>
+
+<div class="giscus-comments-notice">
+  <p><small>评论系统由 <a href="https://giscus.app/">Giscus</a> 提供，基于GitHub Discussions。请遵守社区规范，文明交流。</small></p>
+</div>
+
+<style>
+.giscus-comments-notice {
+  margin-top: 2rem;
+  padding: 1rem;
+  background-color: #f8f9fa;
+  border-radius: 0.5rem;
+  border-left: 4px solid #0366d6;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.giscus-comments-notice a {
+  color: #0366d6;
+  text-decoration: none;
+}
+
+.giscus-comments-notice a:hover {
+  text-decoration: underline;
+}
+</style>

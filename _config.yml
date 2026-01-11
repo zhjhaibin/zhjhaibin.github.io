@@ -1,0 +1,94 @@
+# Jekyll 配置文件
+# 用于 zhjhaibin.github.io 日记博客
+
+# 基本设置
+title: "我的日记博客"
+email: ""  # 可选，可留空或填写您的邮箱
+description: "记录生活点滴，分享思考感悟"
+baseurl: ""  # 如果部署到项目仓库，填写仓库名；用户仓库留空
+url: "https://zhjhaibin.github.io"  # 您的GitHub Pages地址
+github_username: zhjhaibin
+
+# 构建设置
+markdown: kramdown
+highlighter: rouge
+permalink: /:year/:month/:day/:title/
+timezone: Asia/Shanghai  # 时区设置为中国上海
+
+# 主题设置
+theme: minima  # 使用Jekyll默认主题，支持中文
+
+# Minima主题自定义配置
+minima:
+  skin: classic  # classic, dark, auto, solarized, solarized-dark
+  date_format: "%Y年%m月%d日"  # 中文日期格式
+  social_links:
+    - platform: github
+      user_url: "https://github.com/zhjhaibin"
+    # 可添加更多社交链接，如Twitter、微博等
+
+# 插件
+plugins:
+  - jekyll-feed  # RSS订阅
+  - jekyll-seo-tag  # SEO优化
+  - jekyll-sitemap  # 网站地图
+
+# 排除文件/目录
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+
+# 包含文件/目录
+include:
+  - _pages  # 自定义页面目录
+  - .well-known  # 用于某些验证文件
+
+# 默认Front Matter设置
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      comments: true  # 默认启用评论
+      tags: []
+      categories: []
+
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+
+# 自定义变量
+author: "zhjhaibin"
+lang: "zh-CN"  # 语言设置为中文
+locale: "zh_CN"
+
+# 搜索配置（用于Simple-Jekyll-Search）
+search: true
+
+# Giscus评论系统配置
+# 需要在GitHub仓库启用Discussions功能后配置
+# 如何获取repo-id和category-id：
+# 1. 访问 https://giscus.app 配置你的仓库
+# 2. 按照指引启用Discussions功能
+# 3. 获取生成的配置代码，找到对应的ID
+giscus:
+  repo: "zhjhaibin/zhjhaibin.github.io"  # 格式：用户名/仓库名
+  repo-id: ""  # 需要从GitHub API获取，访问 https://api.github.com/repos/zhjhaibin/zhjhaibin.github.io 查看"id"字段
+  category: "Announcements"  # Discussions分类
+  category-id: ""  # 需要从GitHub API获取
+  mapping: "pathname"  # 使用文章路径作为映射
+  strict: "0"  # 严格匹配
+  reactions-enabled: "1"  # 启用表情反应
+  emit-metadata: "0"  # 不发送元数据
+  input-position: "bottom"  # 评论框位置：top或bottom
+  theme: "light"  # light, dark, preferred_color_scheme
+  lang: "zh-CN"  # 语言
+  loading: "lazy"  # 懒加载
